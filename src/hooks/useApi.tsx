@@ -16,7 +16,6 @@ export interface ArticleDTO {
 export default function useApi() {
   async function fetchArticle(id: number): Promise<Record<string, any>> {
     const res = await fetch(`/api/articles/${id}`);
-    if (!res.ok) throw new Error(`API error ${res.status}`);
     return res.json();
   }
 

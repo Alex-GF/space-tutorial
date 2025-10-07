@@ -1,18 +1,20 @@
 import { motion } from "framer-motion";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import NewsArticle from "./NewsArticle";
-import { useShowAds } from "../context/showAdsContext";
 import Loading from "./Loading";
 import ErrorMessage from "./ErrorMessage";
 import useApi, { ArticleDTO } from "../hooks/useApi";
 
-export default function ArticleSection() {
+export default function ArticleSection({
+  containerClassName,
+}: {
+  readonly containerClassName?: string;
+}) {
   const [article, setArticle] = useState<ArticleDTO | null>(null);
   const [currentIdx, setCurrentIdx] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const { showAds } = useShowAds();
   const { fetchArticle } = useApi();
 
   // Scroll to top whenever the current article changes
@@ -45,7 +47,8 @@ export default function ArticleSection() {
     <motion.div
       layout
       transition={{ duration: 0.3 }}
-      className={`mb-12 ${showAds ? "lg:col-span-8" : "lg:col-span-12"}`}>
+      className={`mb-12 ${containerClassName}`}
+    >
       {loading && <Loading label="Loading articles…" />}
       {error && <ErrorMessage message={error} />}
       {!loading && !error && article && (
@@ -66,7 +69,8 @@ export default function ArticleSection() {
               whileTap={{ scale: 0.97 }}
               whileHover={{ scale: 1.02 }}
               onClick={() => setCurrentIdx((i) => (i + 1) % 5)}
-              className="px-4 py-2 rounded-md bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium shadow-sm">
+              className="px-4 py-2 rounded-md bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium shadow-sm"
+            >
               Load another article
             </motion.button>
           </div>
