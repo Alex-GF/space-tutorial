@@ -11,7 +11,7 @@ By the end of the tutorial, you will have a fully functional SaaS-like applicati
 - Adapt its UI anytime the pricing changes.
 - Adapt its UI anytime users novates their contract.
 
-> [!INFO]
+> [!NOTE]
 > We’ve prepared a video walkthrough for this laboratory.
 > Feel free to watch it if you’d like a step-by-step explanation or need to clarify any doubts:
 > https://youtu.be/-GIpNp90qB8
@@ -130,7 +130,7 @@ yarn add space-react-client space-node-client
 pnpm add space-react-client space-node-client
 ```
 
-> ⚠️ **Important:**  
+> [!IMPORTANT]  
 > This laboratory uses **pnpm** to run both the backend and the frontend concurrently.  
 > If you don’t have it installed globally, run:
 > ```bash
@@ -153,6 +153,7 @@ pnpm add space-react-client space-node-client
 
 In `server/src/index.ts`, connect to your local SPACE instance:
 
+> [!IMPORTANT]
 > ⚠️ **API Key reminder:**  
 > If you launched SPACE using **Docker**, the **API Key** is generated automatically.  
 > Open the **Access Control** tab in the SPACE dashboard, locate the **admin** user, and copy the corresponding **API Key**.  
@@ -356,6 +357,7 @@ Replace the previous `/api/articles/:id` endpoint with the following implementat
 
 In the file `src/App.tsx`, replace the `<ShowAdsProvider>` provider with the **`<SpaceProvider>`** from `space-react-client`:
 
+> [!IMPORTANT]
 > ⚠️ **API Key reminder:**  
 > If you launched your SPACE instance using **Docker**, the **API Key** is automatically generated.  
 > Open the **Access Control** tab in the SPACE dashboard, find your **admin** user, and copy its **API Key**.  
