@@ -113,6 +113,9 @@ In this section, you’ll connect the app to a SPACE instance and enable basic p
 
 To do so, follow this tutorial: [How to run a SPACE instance](https://sphere-docs.vercel.app/docs/2.0.1/api/space/user-guide/run-space-instance).
 
+> [!NOTE]
+> The SPACE repository is available at https://github.com/isa-group/space
+
 Once your SPACE instance is up and running, create the **YAML pricing file** shown earlier in this guide (the `News` pricing example).  
 Save it locally — for example, as `news-pricing.yaml` — and then open the **Services Management** tab in the SPACE dashboard.  
 Click **Add Service**, upload this YAML file to register the *News* service.  
