@@ -11,6 +11,11 @@ By the end of the tutorial, you will have a fully functional SaaS-like applicati
 - Adapt its UI anytime the pricing changes.
 - Adapt its UI anytime users novates their contract.
 
+> [!INFO]
+> We’ve prepared a video walkthrough for this laboratory.
+> Feel free to watch it if you’d like a step-by-step explanation or need to clarify any doubts:
+> https://youtu.be/-GIpNp90qB8
+
 ## 1. Pricing Overview
 
 The version of the laboratory that you can find on the `main` branch does not include any pricing.
